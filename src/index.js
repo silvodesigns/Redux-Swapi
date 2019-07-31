@@ -15,9 +15,14 @@ import thunk from 'redux-thunk';
 // logger from redux-logger
 // rootReducer from ./reducers
 
+
+//LOGGGER & MIDDLEWARE This is a very basic middleware package that will 
+//console.log your actions as they flow through the action creators,
+// before they hit the reducer.
+
 const store = createStore(
   rootReducer,
-  applyMiddleware(logger)
+  applyMiddleware(logger, thunk)
   /* applyMiddleware goes here */
 );
 
