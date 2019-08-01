@@ -20,9 +20,10 @@ import thunk from 'redux-thunk';
 //console.log your actions as they flow through the action creators,
 // before they hit the reducer.
 
+//store = single source of truth
 const store = createStore(
   rootReducer,
-  applyMiddleware(logger, thunk)
+  applyMiddleware (thunk, logger)//helper function
   /* applyMiddleware goes here */
 );
 
